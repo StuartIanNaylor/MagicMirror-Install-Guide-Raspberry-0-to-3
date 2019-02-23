@@ -80,8 +80,8 @@ Which for me returns, but trust PM2 and not me.
 sudo env PATH=$PATH:/home/pi/.nvm/versions/node/v10.15.1/bin /home/pi/.nvm/versions/node/v10.15.1/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
 ```
 So do as said and copy & paste what PM2 tells you.
-This is where us Pi0/1 and 2/3 owners depart as the need of use of Chromium rather Electron dicates some small changes.
-For Pi 0/1 owners.
+This is where us Pi0/1 and 2/3 owners depart as the need of use of Chromium rather Electron dicates some small changes
+for Pi 0/1 owners.
 For Pi 2/3 owners the last thing is.
 ```
 pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
