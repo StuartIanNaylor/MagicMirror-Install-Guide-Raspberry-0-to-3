@@ -24,3 +24,14 @@ sudo raspi-config
 ```
 sudo reboot
 ```
+Now also we will change the LightDM Greeter background
+```
+sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
+```
+Uncomment the background section so we have
+```
+[greeter]
+background=~/MagicMirror/splashscreen/splash_halt.png
+#user-background=
+#theme-name=
+```
