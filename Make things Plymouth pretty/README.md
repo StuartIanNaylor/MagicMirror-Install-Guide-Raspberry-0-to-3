@@ -4,7 +4,7 @@ How to add your MagicMirror Boot & restart Splashes to Plymouth & LightDM
 ```
 sudo mkdir /usr/share/plymouth/themes/MagicMirror
 sudo cp ~/MagicMirror/splashscreen/splash.png /usr/share/plymouth/themes/MagicMirror/splash.png
-sudo cp ~/MagicMirror/splashscreen/splash.png /usr/share/plymouth/themes/MagicMirror/splash_halt.png
+sudo cp ~/MagicMirror/splashscreen/splash_halt.png /usr/share/plymouth/themes/MagicMirror/splash_halt.png
 sudo cp ~/MagicMirror/splashscreen/MagicMirror.plymouth /usr/share/plymouth/themes/MagicMirror/MagicMirror.plymouth
 sudo cp ~/MagicMirror/splashscreen/MagicMirror.script /usr/share/plymouth/themes/MagicMirror/MagicMirror.script
 sudo plymouth-set-default-theme -R MagicMirror
