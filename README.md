@@ -130,7 +130,8 @@ sudo raspi-config
 ```
 - [x] 3 Boot options
 - [x] B1 Desktop/CLI
-- [x] B4 Desktop Autologin
+- [x] B4 Desktop Autologin.
+
 Then like the P2/3 owners add and save to PM2
 ```
 pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
