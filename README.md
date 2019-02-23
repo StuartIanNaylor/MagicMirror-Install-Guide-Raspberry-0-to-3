@@ -140,3 +140,6 @@ Save that for autoboot
 pm2 save
 ```
 Then reboot
+```
+sudo reboot
+```
