@@ -4,7 +4,7 @@ Rather than an install script a guide on how easy it is to install NodeJS and ma
 
 ### Grab you image from raspberrypi.org/downloads/raspbian/
 
-Its up to you which you use but as in the name [Raspbian Raspbian Stretch Lite Lateste](https://downloads.raspberrypi.org/raspbian_lite_latest) is the lightest and likely to create the best results.
+Its up to you which you use but as in the name [Raspbian Raspbian Stretch Lite Latest](https://downloads.raspberrypi.org/raspbian_lite_latest) is the lightest and likely to create the best results.
 For a mirror that will generally be remote and a mirror installing a full desktop is likely pointless.
 
 Flash the image using Etcher from [https://www.balena.io/etcher/]()
