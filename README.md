@@ -147,6 +147,10 @@ Save that for autoboot
 ```
 pm2 save
 ```
+Remember the config
+```
+wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/config.js -O ~/MagicMirror/config/config.js
+```
 Then reboot
 ```
 sudo reboot
