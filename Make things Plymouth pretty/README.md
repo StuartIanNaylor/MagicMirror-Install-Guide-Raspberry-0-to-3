@@ -14,6 +14,15 @@ sudo update-initramfs -u
 I find Plymouth somes a bit hit & miss, maybe me, just being me, but that should get the boot and reboot Plymouth MagicMirror them to enable. Reboot seems to show far more often :)
 But some excellent documentation in the [Ubuntu Wiki](https://wiki.ubuntu.com/Plymouth)
 
+The last touch is to do the same for the Xwindow using feh.
+
+feh doesn't like transparencies and you can try the splashscreens that already exist. I prob just heard an Uurgh! so download a solid loader screen or any screen that doesn't have a transparency.
+```
+wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/Make%20things%20Plymouth%20pretty/splash-solid.png
+feh --bg-scale /path/to/image.file
+```
+On a reboot you should now have a slight gap between plymouth & xwindow but a relatively solid boot screen.
+You will have to change /path/to/image.file to the folder you ran the wget and are going to store the image.
 
 To finalise run raspi-config once more just to make sure
 ```
