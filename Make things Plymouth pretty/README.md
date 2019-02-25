@@ -25,13 +25,6 @@ On a reboot you should now have a slight gap between plymouth & xwindow but a re
 You will have to change /path/to/image.file to the folder you ran the wget and are going to store the image.
 
 To finalise run raspi-config once more just to make sure
-```
-sudo raspi-config
-```
-- [x] 3 Boot options
-- [x] B3 Splash
-- [x] Yes to enable
-```
-sudo reboot
-```
+Choose console autologin once more and reboot.
+
 
