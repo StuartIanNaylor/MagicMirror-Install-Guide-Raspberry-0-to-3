@@ -39,7 +39,7 @@ Pi0/1 owners yeap the first boot update/upgrade to get the latest will be a :sle
 So now we have a completely updated and upgraded Pi and now to install Mirror specific packages.
 ```
 sudo apt-get install -y xserver-xorg-video-dummy xserver-xorg-input-void xserver-xorg-video-fbturbo xserver-xorg-core xinit x11-xserver-utils xfonts-100dpi xfonts-75dpi xfonts-base xfonts-scalable libgl1-mesa-dri mesa-utils 
-sudo apt-get install -y chromium-browser unclutter git rpd-plym-splash plymouth-x11 xdotool
+sudo apt-get install -y chromium-browser unclutter git rpd-plym-splash plymouth-x11 xdotool feh
 ```
 NodeJS for Pi 0/1 Armv6l is supported but not pakaged due to problems with Chromium compile for electron, this is no problem as the [NodeJS NVM NodeVersionManager](https://github.com/creationix/nvm) is excellent and probably should be used for all Pi versions.
 If you have a Pi 2/3 armv7l processor then you can install NodeJS via raspbian packages sudo-apt-get instal... but the NVM gives far better control.
