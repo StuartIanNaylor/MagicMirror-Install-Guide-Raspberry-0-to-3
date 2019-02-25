@@ -20,7 +20,7 @@ feh doesn't like transparencies and you can try the splashscreens that already e
 ```
 wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/Make%20things%20Plymouth%20pretty/splash-solid.png
 ```
-Then change the path prob the /splashscreen/ folder
+Then change the /path/to/image.file prob the /splashscreen/ folder or where just downloaded.
 ```
 feh --bg-scale /path/to/image.file
 ```
