@@ -8,6 +8,7 @@ sudo cp ~/MagicMirror/splashscreen/splash_halt.png /usr/share/plymouth/themes/Ma
 sudo cp ~/MagicMirror/splashscreen/MagicMirror.plymouth /usr/share/plymouth/themes/MagicMirror/MagicMirror.plymouth
 sudo cp ~/MagicMirror/splashscreen/MagicMirror.script /usr/share/plymouth/themes/MagicMirror/MagicMirror.script
 sudo plymouth-set-default-theme -R MagicMirror
+sudo update-initramfs -u
 ```
 
 I find Plymouth somes a bit hit & miss, maybe me, just being me, but that should get the boot and reboot Plymouth MagicMirror them to enable. Reboot seems to show far more often :)
@@ -24,14 +25,4 @@ sudo raspi-config
 ```
 sudo reboot
 ```
-Now also we will change the LightDM Greeter background
-```
-sudo nano /etc/lightdm/lightdm-gtk-greeter.conf
-```
-Uncomment the background section so we have
-```
-[greeter]
-background=~/MagicMirror/splashscreen/splash_halt.png
-#user-background=
-#theme-name=
-```
+
