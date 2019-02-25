@@ -114,6 +114,12 @@ xset s noblank
 sleep 20
 chromium-browser --noerrdialogs --kiosk http://localhost:8080 --incognito --disable-translate --window-size=1920,1080 --window-position=0,0
 ```
+create the autologin startx command
+```
+echo '
+# startx on login
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx > /dev/null 2>&1'>>.bashrc
+```
 Then edit run-start.sh
 ```
 sed -i 's/electron js\/electron.js /node serveronly /g' ~/MagicMirror/run-start.sh
