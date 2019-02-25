@@ -19,6 +19,9 @@ The last touch is to do the same for the Xwindow using feh.
 feh doesn't like transparencies and you can try the splashscreens that already exist. I prob just heard an Uurgh! so download a solid loader screen or any screen that doesn't have a transparency.
 ```
 wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/Make%20things%20Plymouth%20pretty/splash-solid.png
+```
+Then change the path prob the /splashscreen/ folder
+```
 feh --bg-scale /path/to/image.file
 ```
 On a reboot you should now have a slight gap between plymouth & xwindow but a relatively solid boot screen.
