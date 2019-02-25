@@ -104,21 +104,21 @@ Thats it unless you wish to read Make things Plymouth pretty and Save my Flash i
 So back to Pi0/1 users.
 The quickest and easiest way is to create a ~/.Xsession file and here is a sample config.
 ```
-nano ~/.Xsession
+nano ~/.xinitrc
 ```
 Paste the following
 ```
 xset s off
 xset -dpms
 xset s noblank
-sleep 20
 chromium-browser --noerrdialogs --kiosk http://localhost:8080 --incognito --disable-translate --window-size=1920,1080 --window-position=0,0
 ```
 create the autologin startx command
 ```
 echo '
 # startx on login
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx > /dev/null 2>&1'>>.bashrc
+sleep 20
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx > /dev/null 2>&1'>>~/.bash_profile
 ```
 Then edit run-start.sh
 ```
