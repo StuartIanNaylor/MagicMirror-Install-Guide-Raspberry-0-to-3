@@ -49,5 +49,12 @@ sudo reboot
 ```
 Also zramctl will now show we have a permenant zram swap drive.
 Now we get to take the default swap off the flash disk as if you do a swapon command it will show you the disks with the Zram having a higher prority and to be used before the default swap disk.
+Also because Zram is much faster than a flash based swap we are going to up the system preference for swap slightly.
+```
+sudo echo 'vm.swappiness=75' >> /etc/sysctl.conf
+```
+
+
+
 
 
