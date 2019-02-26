@@ -43,8 +43,6 @@ top
 ```
 Will give you details of current memory and swap usuage.
 ```
-sudo modprobe zram
-sudo zramctl -f -a lz4 -s 220M
-sudo mkswap /dev/zram0
-swapon /dev/zram0
+FILE=$(mktemp)
+wget https://mirrors.kernel.org/ubuntu/pool/universe/z/zram-config/zram-config_0.5_all.deb -qO $FILE && sudo dpkg -i $FILE
 ```
