@@ -45,4 +45,5 @@ Will give you details of current memory and swap usuage.
 ```
 FILE=$(mktemp)
 wget https://mirrors.kernel.org/ubuntu/pool/universe/z/zram-config/zram-config_0.5_all.deb -qO $FILE && sudo dpkg -i $FILE
+sudo reboot
 ```
