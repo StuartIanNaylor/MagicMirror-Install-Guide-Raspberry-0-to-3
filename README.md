@@ -108,10 +108,16 @@ nano ~/.xinitrc
 ```
 Paste the following
 ```
+# x11 configuration
+# to change resolution *
+# * WIDTHxHEIGTH must be compatible with your screen
+# xrandr -s 1280x720
+# avoid sleep
 xset s off
 xset -dpms
 xset s noblank
-chromium-browser --noerrdialogs --kiosk http://localhost:8080 --incognito --disable-translate --window-size=1920,1080 --window-position=0,0
+~/.fehbg &
+chromium-browser --noerrdialogs --kiosk http://localhost:8080 --incognito --disable-translate --window-size=1920,1080 --window-position=0,0 --ash-copy-host-background-at-boot --enable-logging --v=1 --user-data-dir=/var/log/chromium --start-fullscreen --no-first-run
 ```
 create the autologin startx command
 ```
@@ -131,14 +137,6 @@ if [ -z "$DISPLAY" ]; then #If not set DISPLAY is SSH remote or tty
 fi
 node serveronly $1
 ```
-So for Desktop Autologin
-```
-sudo raspi-config
-```
-- [x] 3 Boot options
-- [x] B1 Desktop/CLI
-- [x] B4 Desktop Autologin.
-
 Then like the P2/3 owners add and save to PM2
 ```
 pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
