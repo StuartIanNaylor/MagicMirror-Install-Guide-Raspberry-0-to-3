@@ -124,7 +124,7 @@ create the autologin startx command
 echo '
 # startx on login
 sleep 20
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx > /dev/null 2>&1'>>~/.bash_profile
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx >> /dev/null 2>&1'>>~/.bash_profile
 ```
 Then edit run-start.sh
 ```
