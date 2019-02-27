@@ -122,12 +122,11 @@ chromium-browser --noerrdialogs --kiosk http://localhost:8080 --incognito --disa
 ```
 create the autologin startx command
 ```
-echo '
-# startx on login
+echo '# startx on login
 if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
 	sleep 20
 	exec startx > /dev/null 2>&1
-fi'>>~/.bash_profile
+fi' >> ~/.bashrc
 ```
 Then edit run-start.sh
 ```
