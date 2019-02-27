@@ -118,6 +118,7 @@ xset s off
 xset -dpms
 xset s noblank
 ~/.fehbg &
+unclutter &
 chromium-browser --noerrdialogs --kiosk http://localhost:8080 --incognito --disable-translate --window-size=1920,1080 --window-position=0,0 --ash-copy-host-background-at-boot --enable-logging --v=1 --user-data-dir=/var/log/chromium --start-fullscreen --no-first-run
 ```
 create the autologin startx command
