@@ -30,7 +30,7 @@ On a reboot you should now have a slight gap between plymouth & xwindow but a re
 You will have to change /path/to/image.file to the folder you ran the wget and are going to store the image.
 Arch Linux have a good doc on feh https://wiki.archlinux.org/index.php/feh
 
-To finalise run raspi-config once more just to make sure
+To finalise run sudo raspi-config once more just to make sure
 Choose spashscreen at boot and also console autologin and reboot.
 
 
