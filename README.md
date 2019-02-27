@@ -156,3 +156,9 @@ Then reboot
 ```
 sudo reboot
 ```
+
+Try that and get used to how things run then have a look in the above folders:-
+
+- [x] 'Make things Plymouth' pretty to add a plymouth and X splash of MagicMirror
+- [x] 'Magic Monitor' simple ways to create MagicMirror log monitors and refresh actions
+- [x] 'Save my Flash' What I wante to do is load Log2Ram on a Zram disk which then its a hell yes but that actually turned into much more work than I expected. Didn't get it running prob could but even after mounting you start to need to change the order of init scripts and things just got Argh!
