@@ -31,6 +31,6 @@ You will have to change /path/to/image.file to the folder you ran the wget and a
 Arch Linux have a good doc on feh https://wiki.archlinux.org/index.php/feh
 
 To finalise run raspi-config once more just to make sure
-Choose console autologin once more and reboot.
+Choose spashscreen at boot and also console autologin and reboot.
 
 
