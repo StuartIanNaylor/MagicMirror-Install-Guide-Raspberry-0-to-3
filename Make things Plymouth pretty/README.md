@@ -24,7 +24,6 @@ wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide
 Then change the /path/to/image.file prob the /splashscreen/ folder or where just downloaded.
 ```
 export DISPLAY=:0
-export XAUTHORITY=~/.Xauthority
 feh --bg-scale ~/MagicMirror/splashscreen/splash-solid.png
 ```
 On a reboot you should now have a slight gap between plymouth & xwindow but a relatively solid boot screen.
