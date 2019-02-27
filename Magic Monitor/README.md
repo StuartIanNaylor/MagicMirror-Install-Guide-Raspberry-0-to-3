@@ -64,4 +64,4 @@ I don't have a Pi2/3 currently and the presumption is electron is just chromium 
 If not you will have to find the electron class name so that xdotool search --onlyvisible --class "electron" will work
 http://manpages.ubuntu.com/manpages/trusty/man1/xdotool.1.html
 
-If you ever need to test the logs just comment out the sh MagicMonitor.sh & with #sh MagicMonitor.sh & reboot and run sh MagicMonitor.sh via ssh
+If you ever need to test the logs just comment out the sh MagicMonitor.sh & with #sh MagicMonitor.sh in run-start.sh & reboot and run sh MagicMonitor.sh via ssh
