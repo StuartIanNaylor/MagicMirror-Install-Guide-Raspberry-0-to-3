@@ -8,7 +8,7 @@ if [ -z "$DISPLAY" ]; then #If not set DISPLAY is SSH remote or tty
 fi
 xdotool search --onlyvisible --class "chromium" key ctrl+F5  -v 2>&1 | logger &
 ```
-The '-v 2>&1 | logger &' just sends the outut to syslog so you can remove that bit if you wish but for testing its good to check its being called.
+The '-v 2>&1 | logger &' just sends the output to syslog so you can remove that bit if you wish but for testing its good to check its being called.
 chmod a+x xdotool.sh to make it executable.
 Then again in ~/MagicMirror do a nano chrome-log.sh and paste the following:-
 ```
