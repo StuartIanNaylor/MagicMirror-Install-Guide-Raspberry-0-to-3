@@ -20,6 +20,9 @@ sh xdotool.sh
 chmod a+x chrome-log.sh to make it executable.
 So if a line contains '8080' & 'ERROR' we are going to fresh refresh Chromium.
 You will have to do some reading on Grep as to be honest anything but simple regex confuses the hell out of me
+If you have a problem module you will have to examine your logs and see if you can find a line for a match to call a fresh refresh.
+You can add that to your grep search or you might just create another seperate monitor say chrome-log2.sh and just add that to the MagicMonitor.sh script with the last call without the ampersand on the end.
+ 
 Then again in ~/MagicMirror do a nano pm2-out-log.sh and paste the following:-
 ```
 ( tail -f -n0 ~/.pm2/logs/MagicMirror-out.log & ) | grep -q 'Ready to go! Please point your browser to:'
