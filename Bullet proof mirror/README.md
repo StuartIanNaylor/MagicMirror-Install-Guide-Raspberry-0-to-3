@@ -56,3 +56,7 @@ Then maybe a internet IP like googles main DNS of 8.8.8.8 might but not sure if 
 8.8.8.8 is usually what many use just never set up a perm watchdog so honestly can not say bbc.co.uk - 212.58.253.67 did actually take that service down and got bombarded by sysadmins to re-instate and its prob the UK's unofficial official ping test.
 
 
+etc/watchdog.conf is a standard linux watchdog file http://www.sat.dundee.ac.uk/psc/watchdog/watchdog-configure.html
+So you can read up on these.
+https://manpages.debian.org/stretch/watchdog/watchdog.8.en.html
+
