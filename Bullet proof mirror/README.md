@@ -51,3 +51,8 @@ And right enough after a minute my computer was no longer available the pi resta
 
 The only thing I am worried about and I guess this is true that you could enter an IP that may never exist and turn your pi into a rotating boot.
 Time to put the SD card in a reader and edit your files and remove that watchdog test on another computer I guess.
+If you don't have an overzealous internal firewall that putting in your router ip 192.168.1.1 with me would make a good WiFi watchdog
+Then maybe a internet IP like googles main DNS of 8.8.8.8 might but not sure if you constanty pinging that you may get filtered.
+8.8.8.8 is usually what many use just never set up a perm watchdog so honestly can not say bbc.co.uk - 212.58.253.67 did actually take that service down and got bombarded by sysadmins to re-instate and its prob the UK's unofficial official ping test.
+
+
