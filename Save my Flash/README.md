@@ -2,59 +2,53 @@
 Flash memory can be written to many many times but it is limited and constant thrashing by logs or swap disks isn't actually good for flash life expectancy.
 So if you wish to have a more trouble free MagicMirror then employ the following
 
-###Log2Ram
-Its in the name but instead of flash it will use a small amount of memory and just rotate logs quicker to achieve this.
+###Log2Zram
+```
+git clone --single-branch --branch log2zram https://github.com/StuartIanNaylor/log2ram
+cd log2ram
+sudo sh log2ram.sh
+```
+Little bit of an update to log to ram but now you can have /var/log in a zram disk
+Also gives more control of zram swaps and choice if you enable or not.
 
-https://github.com/azlux/log2ram
+etc/log2ram.conf
 ```
-curl -Lo log2ram.tar.gz https://github.com/azlux/log2ram/archive/master.tar.gz
-tar xf log2ram.tar.gz
-cd log2ram-master
-chmod +x install.sh && sudo ./install.sh
-cd ..
-rm -r log2ram-master
+# Configuration file for Log2Ram (https://github.com/azlux/log2ram) under MIT license. This configuration file is read 
+# by the log2ram service Size for the ram folder, it defines the size the log folder will reserve into the RAM. If it's 
+# not enough, log2ram will not be able to use ram. Check you /var/log size folder. The default is 40M and is basically 
+# enough for a lot of applications. You will need to increase it if you have a server and a lot of log for example. 
+# Above is log2ram original size increased to 80M zram. Assuming 3:1 LZO compression ram usage should be reduced to 
+# 26.66M. Size is in MB
+SIZE=80
+# This variable can be set to true if you prefer "rsync" rather than "cp". I use the command cp -u and rsync -X, so I 
+# don't copy the all folder every time for optimization. You can choose which one you want. Be sure rsync is installed 
+# if you use it.
+USE_RSYNC=false
+# If there are some errors with available RAM space, a system mail will be send Change it to false and you will have 
+# only a log if there is no place on RAM anymore.
+MAIL=true
+# Big cores should only be counted really but this is where you can dictate zram stream count Default is 1 and settings 
+# can be edited to personal taste.
+# BIG_CORES=0 Disables zram
+BIG_CORES=1
+# Free mem factor deb is 505 I concur that 75 is better but its open. Free mem factor is just the fraction of 
+# free mem used for swap drive total Drive size = Free_Mem * mem_factor / 100 / Big_Cores
+# So if you want .75 of total mem make mem_factor 75 as divided by 100 to avoid float usage
+MEM_FACTOR=75
+# Compression algorythm either LZ0 or LZ$
+COMP_ALG=lzo
+# ZLTG flag means use ZRAM ramdisk for log2ram true=enable / false=disable
+ZLTG=true
+# SWAP_PRI sets swap_priority of zram streams set by big_cores default=75
+SWAP_PRI=75
 ```
-Reboot and check if working
-
-Is it working?
-You can now check the mount folder in ram with (You will see lines with log2ram if working)
 ```
-df -h
+sudo mkdir /var/log/chromium
+sudo mkdir /var/log/pm2
+sudo chown pi:pi /var/log/chromium
+sudo chown pi:pi /var/log/pm2
 ```
-log2ram          40M  532K   40M   2% /var/log
-```
-mount
-```
-log2ram on /var/log type tmpfs (rw,nosuid,nodev,noexec,relatime,size=40960k,mode=755)
-
-
-###Zram
-Now this one is debable as the zero is a little light on horse power and even if the increase via Zram is minimal its still 50/50 for me.
-I think actually its prob better without apart from creating a Ram disk for Log2Ram and changing the fstab for log2ram.
-I am going to go through Zram and you can try it out yourself and just see how it runs and if memory is a problem with flash swap turned off.
-
-Zram is part of the kernel and zramctl is alerady installed.
-```
-free -h
-```
-or
-```
-top
-```
-Will give you details of current memory and swap usuage.
-```
-FILE=$(mktemp)
-wget https://mirrors.kernel.org/ubuntu/pool/universe/z/zram-config/zram-config_0.5_all.deb -qO $FILE && sudo dpkg -i $FILE
-sudo reboot
-```
-Also zramctl will now show we have a permenant zram swap drive.
-Now we get to take the default swap off the flash disk as if you do a swapon command it will show you the disks with the Zram having a higher prority and to be used before the default swap disk.
-Also because Zram is much faster than a flash based swap we are going to up the system preference for swap slightly.
-```
-sudo echo 'vm.swappiness=75' >> /etc/sysctl.conf
-```
-
-
-
-
-
+Unfortnately you have to move the user directory of chrome to move the logs but actually this is no problem as there is a lot of dynamic writes going to your flash there.
+So it actually works to use a ram disk and even better a compressed zram disk that doesn't steal as much precious memory.
+Pm2 you just set log locations when you pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
+So just edit pm2_MagicMirror.json
