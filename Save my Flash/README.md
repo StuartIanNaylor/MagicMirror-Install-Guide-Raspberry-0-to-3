@@ -73,3 +73,7 @@ to something like this but just check the pm2 docs at http://pm2.keymetrics.io/d
   "log_date_format" : "YYYY-MM-DD HH:mm Z"
 }
 ```
+```
+sudo nano /etc/sysctl.conf
+```
+Add vm.swappiness = 75 to the end of that file and save
