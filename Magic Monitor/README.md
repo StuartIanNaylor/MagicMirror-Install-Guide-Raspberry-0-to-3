@@ -41,7 +41,7 @@ Again in ~/MagicMirror do a nano MagicMonitor.sh and paste the following:-
 sh chrome-log.sh &
 sh pm2-out-log.sh
 ```
-chmod a+x pm2-out-log.sh to make it executable.
+chmod a+x MagicMonitor.sh to make it executable.
 Again you can sh MagicMonitor.sh to test without -q for hit test or with -q for action for both monitors running.
 
 Then finally nano run-start.sh and insert this line so its looks as so for Pi0/1.
