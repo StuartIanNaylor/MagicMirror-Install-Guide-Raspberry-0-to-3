@@ -43,4 +43,4 @@ while(1):
 So we found that watchdog is running in the syslog and now to test.
 python3 pythonbomb.py
 
-Doesn't take long to swap the system that one 
+Doesn't take long to swamp the system that one 
