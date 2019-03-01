@@ -52,3 +52,24 @@ Unfortnately you have to move the user directory of chrome to move the logs but 
 So it actually works to use a ram disk and even better a compressed zram disk that doesn't steal as much precious memory.
 Pm2 you just set log locations when you pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
 So just edit pm2_MagicMirror.json
+```
+{
+  "apps" : [{
+    "name"        : "MagicMirror",
+    "script"      : "/home/pi/MagicMirror/installers/mm.sh",
+    "watch"       : ["/home/pi/MagicMirror/config/config.js"]
+  }]
+}
+```
+to something like this but just check the pm2 docs at http://pm2.keymetrics.io/docs/usage/log-management/
+```
+{
+  "name"        : "MagicMirror",
+  "script"      : "/home/pi/MagicMirror/installers/mm.sh",
+  "watch"       : ["/home/pi/MagicMirror/config/config.js"],
+  "error_file"      : "/var/log/pm2/err.log",
+  "out_file"        : "/var/log/pm2/out.log",
+  "merge_logs"      : true,
+  "log_date_format" : "YYYY-MM-DD HH:mm Z"
+}
+```
