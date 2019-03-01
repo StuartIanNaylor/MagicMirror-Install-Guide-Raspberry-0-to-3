@@ -8,7 +8,7 @@ git clone --single-branch --branch log2zram https://github.com/StuartIanNaylor/l
 cd log2ram
 sudo sh log2ram.sh
 ```
-Little bit of an update to log to ram but now you can have /var/log in a zram disk
+Little bit of an update to log2ram but now you can have /var/log in a zram disk
 Also gives more control of zram swaps and choice if you enable or not.
 
 etc/log2ram.conf
