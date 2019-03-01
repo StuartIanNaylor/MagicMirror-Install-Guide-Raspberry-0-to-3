@@ -44,7 +44,7 @@ sh pm2-out-log.sh
 chmod a+x pm2-out-log.sh to make it executable.
 Again you can sh MagicMonitor.sh to test without -q for hit test or with -q for action for both monitors running.
 
-Then finally nano run-start-sh and insert this line so its looks as so for Pi0/1.
+Then finally nano run-start.sh and insert this line so its looks as so for Pi0/1.
 ```
 if [ -z "$DISPLAY" ]; then #If not set DISPLAY is SSH remote or tty
 	export DISPLAY=:0 # Set by default display
