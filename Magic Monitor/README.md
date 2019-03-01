@@ -14,7 +14,7 @@ Then again in ~/MagicMirror do a nano chrome-log.sh and paste the following:-
 ```
 #Grep is a bit confusing as \| ie OR not AND so you get the following of Or + inline there is the other string
 #grep -q '8080\|ERROR' would return true if either exist (OR)
-( tail -f -n0 ~/.config/chromium/chrome_debug.log & ) | grep -q '8080.*ERROR\|ERROR.*8080'
+( tail -f -n0 /var/log/chromium/chrome_debug.log & ) | grep -q '8080.*ERROR\|ERROR.*8080'
 sh xdotool.sh
 ```
 chmod a+x chrome-log.sh to make it executable.
@@ -25,7 +25,7 @@ You can add that to your grep search or you might just create another seperate m
  
 Then again in ~/MagicMirror do a nano pm2-out-log.sh and paste the following:-
 ```
-( tail -f -n0 ~/.pm2/logs/MagicMirror-out.log & ) | grep -q 'Ready to go! Please point your browser to:'
+( tail -f -n0 /var/log/pm2/out.log & ) | grep -q 'Ready to go! Please point your browser to:'
 sh xdotool.sh
 ```
 chmod a+x pm2-out-log.sh to make it executable.
@@ -65,3 +65,4 @@ If not you will have to find the electron class name so that xdotool search --on
 http://manpages.ubuntu.com/manpages/trusty/man1/xdotool.1.html
 
 If you ever need to test the logs just comment out the sh MagicMonitor.sh & with #sh MagicMonitor.sh in run-start.sh & reboot and run sh MagicMonitor.sh via ssh
+You need to check the paths in the script as I have assumed the guide in 'Save my flash' has been followed and logs are now in /var/log/
