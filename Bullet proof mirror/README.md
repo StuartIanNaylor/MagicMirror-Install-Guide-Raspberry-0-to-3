@@ -44,3 +44,10 @@ So we found that watchdog is running in the syslog and now to test.
 python3 pythonbomb.py
 
 Doesn't take long to swamp the system that one 
+The time base has me confused as its very quick to react on a load test but pretty sure the ping test is a minute.
+Its good how it is and the default values seem to work well as the highest I have ever seen my pi is just above 3
+Ping test I tried this by putting in the IP of my desktop 192.168.1.16 which is local but then I just shut down.
+And right enough after a minute my computer was no longer available the pi restarted.
+
+The only thing I am worried about and I guess this is true that you could enter an IP that may never exist and turn your pi into a rotating boot.
+Time to put the SD card in a reader and edit your files and remove that watchdog test on another computer I guess.
