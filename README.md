@@ -84,7 +84,12 @@ sudo env PATH=$PATH:/home/pi/.nvm/versions/node/v10.15.1/bin /home/pi/.nvm/versi
 So do as said and copy & paste what PM2 tells you.
 This is where us Pi0/1 and 2/3 owners depart as the need of use of Chromium rather Electron dicates some small changes
 for Pi 0/1 owners.
+Copy the sample config.js to the config folder
+```
+wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/config.js -O ~/MagicMirror/config/config.js
+```
 For Pi 2/3 owners the last thing is.
+
 ```
 pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
 ```
@@ -92,18 +97,10 @@ Save that for autoboot
 ```
 pm2 save
 ```
-Copy the sample config.js to the config folder
-```
-wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/config.js -O ~/MagicMirror/config/config.js
-```
- And we are ready to go with
-```
-DISPLAY=:0 npm start
-```
 Thats it unless you wish to read Make things Plymouth pretty and Save my Flash in the above to folders on instructions how to have a MagicMirror splash screen and how to use zram and tools to limit flash writes to a minimium. Apart the last bit about raspi-config and desktop autologin.
 
 So back to Pi0/1 users.
-The quickest and easiest way is to create a ~/.Xsession file and here is a sample config.
+The quickest and easiest way is to create a ~/.xinitrc file and here is a sample config.
 ```
 nano ~/.xinitrc
 ```
