@@ -33,4 +33,4 @@ Arch Linux have a good doc on feh https://wiki.archlinux.org/index.php/feh
 To finalise run sudo raspi-config once more just to make sure
 Choose spashscreen at boot and also console autologin and reboot.
 
-
+PS if you have a black border around your screen you need to sudo raspi-config avanced options and turn off overscan.
