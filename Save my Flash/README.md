@@ -64,15 +64,21 @@ So just nano ~/MagicMirror/installers/pm2_MagicMirror.json
 to something like this but just check the pm2 docs at http://pm2.keymetrics.io/docs/usage/log-management/
 ```
 {
-  "name"        : "MagicMirror",
-  "script"      : "/home/pi/MagicMirror/installers/mm.sh",
-  "watch"       : ["/home/pi/MagicMirror/config/config.js"],
-  "error_file"      : "/var/log/pm2/err.log",
-  "out_file"        : "/var/log/pm2/out.log",
-  "merge_logs"      : true,
-  "log_date_format" : "YYYY-MM-DD HH:mm Z"
+  "apps" : [{
+    "name"        : "MagicMirror",
+    "script"      : "/home/pi/MagicMirror/installers/mm.sh",
+    "watch"       : ["/home/pi/MagicMirror/config/config.js"],
+    "error_file"      : "/var/log/pm2/err.log",
+    "out_file"        : "/var/log/pm2/out.log",
+    "merge_logs"      : true,
+    "log_date_format" : "YYYY-MM-DD HH:mm Z"
+}]
 }
+
 ```
+cd ~/MagicMirror and pm2 stop MagicMirror
+pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
+pm2 save
 ```
 sudo nano /etc/sysctl.conf
 ```
