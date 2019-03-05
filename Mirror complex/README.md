@@ -44,3 +44,7 @@ cd ~/MagicMirror/modules/MMM-News nano MMM-News.css
 ```
 cd ~/MagicMirror
 rm config.js
+wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/Mirror%20complex/config.js
+
+Now you can check through and visit the modules added and read up about the config and have a look at the changes and how that looks on screen.
+
