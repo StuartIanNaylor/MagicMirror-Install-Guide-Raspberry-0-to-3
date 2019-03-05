@@ -52,7 +52,7 @@ SWAP_PRI=75
 # edit /etc/sysctl.conf add vm.swappiness = 75 or higher to the end of that file and save
 ```
 sudo nano /etc/log2ram.conf
-change ZL2R to =true, up the SIZE to =80M and BIG_CORES =1
+change ZL2R to =true, up the SIZE to =80M and BIG_CORES =1 then sudo reboot
 ```
 sudo mkdir /var/log/chromium
 sudo mkdir /var/log/pm2
