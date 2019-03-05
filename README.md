@@ -150,7 +150,7 @@ Remember the config
 ```
 wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/config.js -O ~/MagicMirror/config/config.js
 ```
-Then reboot, maybe just check sudo rasp-config that console-autoboot and splashscreen are enabled once more and reboot from there
+Then reboot, maybe just check sudo rasp-config that console-autologin and splashscreen are enabled from the boot menu once more and reboot from there
 ```
 sudo reboot
 ```
