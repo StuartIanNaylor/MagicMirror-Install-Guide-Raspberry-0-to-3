@@ -32,7 +32,7 @@ var config = {
 			modules:
 					[["clock", "weatherforecast", "compliments", "currentweather" ],
 					[ "clock", "calendar", "newsfeed" ],
-					[ "clock", "MMM-News" ]],
+					[ "clock", "MMM-News", "calendar" ]],
 			fixed: ["MMM-page-indicator"],
 			animationTime: 5*1000,
 			rotationTime: 30*1000,
