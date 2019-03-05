@@ -51,7 +51,7 @@ sudo chown pi:pi /var/log/pm2
 Unfortnately you have to move the user directory of chrome to move the logs but actually this is no problem as there is a lot of dynamic writes going to your flash there.
 So it actually works to use a ram disk and even better a compressed zram disk that doesn't steal as much precious memory and increase Chromium performance.
 Pm2 you just set log locations when you pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
-So just edit pm2_MagicMirror.json
+So just nano ~/MagicMirror/installers/pm2_MagicMirror.json
 ```
 {
   "apps" : [{
