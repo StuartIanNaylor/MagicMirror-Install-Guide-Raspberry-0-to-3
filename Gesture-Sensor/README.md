@@ -17,3 +17,6 @@ Raspbian already comes ready to roll with I2C as i2cdetect -y 1 should show some
 
 The pi has 2 I2C buses I2C1 is commonly used as the above command checks I2C0 would be i2cdetect -y 1
 
+Same with as i2cdetect python3-smbus is ready to roll and a good start is:-
+https://learn.sparkfun.com/tutorials/python-programming-tutorial-getting-started-with-the-raspberry-pi/experiment-4-i2c-temperature-sensor
+
