@@ -20,3 +20,5 @@ The pi has 2 I2C buses I2C1 is commonly used as the above command checks I2C0 wo
 Same with as i2cdetect python3-smbus is ready to roll and a good start is:-
 https://learn.sparkfun.com/tutorials/python-programming-tutorial-getting-started-with-the-raspberry-pi/experiment-4-i2c-temperature-sensor
 
+Connect with the usual I2C1 wiring of the pi
+![I2C1 wiring](https://cdn.sparkfun.com/assets/learn_tutorials/7/8/3/pi_fritzing_03.png)
