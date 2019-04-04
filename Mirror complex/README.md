@@ -43,7 +43,7 @@ cd ~/MagicMirror/modules/MMM-News nano MMM-News.css
 }
 ```
 ```
-cd ~/MagicMirror
+cd ~/MagicMirror/config
 rm config.js
 wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/Mirror%20complex/config.js
 ```
