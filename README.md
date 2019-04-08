@@ -86,8 +86,8 @@ Copy the sample config.js to the config folder
 ```
 wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide-Raspberry-0-to-3/master/config.js -O ~/MagicMirror/config/config.js
 ```
-This is where us Pi0/1 and 2/3 owners depart as the need of use of Chromium rather Electron dicates some small changes
-for Pi 0/1 owners.
+This is where us Pi0/1 and 2/3 owners with desktops depart as the need of use of Chromium rather Electron dicates some small changes
+for Pi 0/1 owners or those who want to run desktop free.
 
 For Pi 2/3 owners the last thing is if you are running with a desktop.
 
