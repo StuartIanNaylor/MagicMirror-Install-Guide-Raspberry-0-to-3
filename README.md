@@ -89,7 +89,7 @@ wget https://raw.githubusercontent.com/StuartIanNaylor/MagicMirror-Install-Guide
 This is where us Pi0/1 and 2/3 owners depart as the need of use of Chromium rather Electron dicates some small changes
 for Pi 0/1 owners.
 
-For Pi 2/3 owners the last thing is.
+For Pi 2/3 owners the last thing is if you are running with a desktop.
 
 ```
 pm2 start ~/MagicMirror/installers/pm2_MagicMirror.json
